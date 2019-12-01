@@ -1,0 +1,53 @@
+<p>contractors works!</p>
+
+{{ departmentId }}
+
+<!-- {{ categoriesName }}
+
+<div>{{ catsubcat | async }}</div>
+          <li *ngFor="let item of catsubcat" [value]="item">{{ item[i].categoriesName}}</li> -->
+
+          <ul *ngFor="let item of catsubcat">
+                <li>
+                    <div>{{item.categoriesName}}</div>
+                    <!-- <div>{{item.subCatName}}</div> -->
+                </li>
+            </ul>
+
+
+            {{ categoriesName }}
+
+<ul class="items">
+        <li (click)="onSelect(department)" *ngFor="let department of departments">
+            <span class="badge">{{ department.id }}</span> {{ department.name }}
+       
+        </li>
+       </ul>
+
+
+
+       <div style="text-align:center">
+            <h4>
+              Basic Pagination
+            </h4>
+           
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Item</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of collection.data | paginate: config">
+                  <th scope="row">{{item.id}}</th>
+                  <td>{{item.value}}</td>
+                </tr>
+              </tbody>
+            </table>
+           
+            <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+           
+          </div>
+
+          
