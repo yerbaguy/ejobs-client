@@ -25,6 +25,13 @@
        </ul>
 
 
+       <ul class="items">
+        <li (click)="onSelect(department)" *ngFor="let item of categories">
+            <span class="badge">{{ item.categoriesName }}</span>
+       
+        </li>
+       </ul>
+
 
        <div style="text-align:center">
             <h4>

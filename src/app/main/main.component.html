@@ -1,68 +1,18 @@
 <p>main works!</p>
 
-<!-- <h3>Department List</h3>
+
 <ul class="items">
- <li (click)="onSelect(department)" *ngFor="let department of departments">
-     <span class="badge">{{ department.id }}</span> {{ department.name }}
+  <li (click)="onSelect(department)" *ngFor="let item of categories">
+      <span class="badge">{{ item.categoriesName }}</span>
+ 
+  </li>
+ </ul>
 
- </li>
-</ul> -->
-
-<div class="row">
-    <label (click)="onSelect(department)" class="col-4" *ngFor="let department of departments">
-        {{ department.name }}
-    </label>
-</div>
-
-<div class="row">
-        <label (click)="onSelectCatSubCat(item)" class="col-4" *ngFor="let item of catsubcat">
-            {{ item.categoriesName }}
-            {{ item.categories_id}}
-        </label>
-    </div>
-    
-
-
-<!-- <div class="container">
-        <div class="row align-items-start">
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
-        </div>
-        <div class="row align-items-center">
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
-        </div>
-        <div class="row align-items-end">
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
-        </div>
-      </div> -->
-
-       <!-- <div class="row" *ngFor="let r of row1;let i =index"> -->
-          <!-- {{ r }}  -->
-            <!-- <div class="col-3" *ngFor="let i of matrix[i]">{{i}}</div>
-        </div> -->
-
-      <div class="bottom-footer">
-
+ <div class="row">
+      <li (click)="onSelectCat(item)" class="col-4" *ngFor="let item of categories">
+          {{ item.categoriesName }}
+         
+          {{ item.categories_id}}
+      </li>
+  </div>
+  

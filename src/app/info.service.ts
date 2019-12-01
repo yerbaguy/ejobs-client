@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 import { of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { RootObject } from 'src/RootObject';
+import { Categories } from '../Categories';
 
 
 
@@ -44,10 +44,10 @@ export class InfoService {
 
 
 
-  getCategories() : Observable<RootObject[]> {
+  getCategories() : Observable<Categories[]> {
  // getCategories() : any { 
 
-    return this.http.get<RootObject[]>(this.categories);
+    return this.http.get<Categories[]>(this.categories);
 
   }
 

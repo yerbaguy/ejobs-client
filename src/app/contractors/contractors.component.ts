@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { InfoService } from '../info.service';
 //import { ICatSubCat } from '../../CatSubCat';
-import { RootObject } from '../../RootObject';
+import { Categories } from '../../Categories';
 import { max } from 'rxjs/operators';
 
 @Component({
@@ -13,7 +13,7 @@ import { max } from 'rxjs/operators';
 })
 export class ContractorsComponent implements OnInit {
 
-  public rootObject:RootObject[] = [];
+  public categories:Categories[] = [];
  // public subCategories:ICatSubCat[] = [];
  
  // public catsub:ICatSubCat;
@@ -74,21 +74,21 @@ export class ContractorsComponent implements OnInit {
 
     this.info.getCategories().subscribe (
 
-        rootObject => {
+        categories => {
 
-          this.rootObject = rootObject;
-          this.subCatName = rootObject[0][0].subCategories.subCatName
+          this.categories = categories;
+          this.subCatName = categories[0][0].subCategories.subCatName
          // this.subCatName = catsubcat[0].subCatName;
 
-          console.log(this.rootObject);
+          console.log(this.categories);
           console.log("subCatName" + this.subCatName);
 
 
          // for (let i=0; catsubcat.length <= 5; i++) {
-           for (let i in rootObject) {
+           for (let i in categories) {
          // this.categoriesName = catsubcat[0].categoriesName
 
-          this.categoriesName = rootObject[i].categoriesName
+          this.categoriesName = categories[i].categoriesName
 
              console.log(this.categoriesName);
            }
